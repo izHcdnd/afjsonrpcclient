@@ -14,16 +14,15 @@ AFJSONRPCClient *client = [AFJSONRPCClient clientWithEndpointURL:[NSURL URLWithS
     success:^(AFHTTPRequestOperation *operation, id responseObject)
 {
     // ...
-}   failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-    // ...
+}
 }];
 
 // Invocation with Parameters
 [client invokeMethod:@"method.name"
-          parameters:@{@"foo" : @"bar", @"baz" : @(13)}
+          parameters:@{@"foo" : @"bar", @"baz" : @(16)}
     success:^(AFHTTPRequestOperation *operation, id responseObject) {
     // ...
-}   failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+}   success:^(AFHTTPRequestOperation *operation, id responseObject) {
     // ...
 }];
 
